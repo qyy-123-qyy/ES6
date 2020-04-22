@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //() => {} 箭头函数 
+   const fn =  () => {
+    console.log(123);
+    }
+    fn();
+    //函数体中只有一句代码，且代码的执行结果就是返回值，可以省略大括号 省略return   
+    const sum=(n1,n2) => n1+n2;
+    const result=sum(10,20);
+    console.log(result);
+
+    //如果形参只有一个，可以省略小括号
+    const fun = (v) =>  alert(v);   
+    fun(20);
+
+    //箭头函数不绑定this关键字，箭头函数没有自己的this关键字。如果要在箭头函数中使用this，
+   //this关键字将指向箭头函数定义位置中的this
+function fn1(){
+  //console.log(this);
+return () => {
+    console.log(this);
+}
+}
+const obj={name:"ruby"};
+fn1.call(obj);
+const resFn=fn1.call(obj);
+resFn();
+   </script>
+</body>
+</html>
