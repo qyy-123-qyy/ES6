@@ -25,15 +25,26 @@
     //箭头函数不绑定this关键字，箭头函数没有自己的this关键字。如果要在箭头函数中使用this，
    //this关键字将指向箭头函数定义位置中的this
 function fn1(){
-  //console.log(this);
+  console.log(this);
 return () => {
     console.log(this);
 }
 }
 const obj={name:"ruby"};
+fn1.call(obj)();
 fn1.call(obj);
 const resFn=fn1.call(obj);
 resFn();
+
+//面试题 obj对象不能产生作用域，箭头函数定义在全局作用域下，say里的this指向的是window
+var name="black"
+var obj1={
+    name:"ruby",
+    say:()=>{
+        alert(this.name)
+    }
+};
+obj1.say()
    </script>
 </body>
 </html>

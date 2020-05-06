@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //find()
+       var arrLike=[{
+           id:1,
+           name:"金钟国",
+       },
+       {
+           id:2,
+           name:"宋智孝",
+       },]
+       console.log(arrLike)
+       var arrReal=arrLike.find(item=>item.id==2);
+       console.log(arrReal)
+
+       //findindex()
+       let arr=[10,20,15]
+       let arr2=arr.findIndex(value=>value>10)
+       console.log(arr2)
+       //includes()
+       console.log(arr.includes(2))
+    </script>
+</body>
+</html>

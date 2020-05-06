@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        //扩展运算符可以将数组拆分成以逗号分隔的参数序列
+        let arr=["a","b",1,2]
+        //...arr //"a","b",1,2
+        console.log(...arr);
+        console.log("a","b",1,2)
+       //合并数组
+        let ary1=[1,2,3]
+        let ary2=[4,5,6]
+        let ary3=[...ary1,...ary2]
+        let ary4=ary3.push(8)
+        console.log(ary3)
+        console.log(ary4)//7
+        ary1.push(...ary2);
+        console.log(ary1)
+
+       //第一种 将类数组转换为真数组
+       var oDivs=document.getElementsByTagName("div")
+       console.log(oDivs);
+       var ary5=[...oDivs]
+       console.log(ary5)
+
+       //第二种 array.from()
+       var arrLike={
+           "0":"刘在石",
+           "1":"金钟国",
+           "2":"宋智孝",
+           "length":3
+       }
+       console.log(arrLike)
+       var arrReal=Array.from(arrLike);
+       console.log(arrReal)
+      
+       var arrLike1={
+           "0":1,
+           "1":3,
+           "2":4,
+           "length":3
+       }
+       console.log(arrLike1)
+       var arrReal1=Array.from(arrLike1,item => item*2
+       );
+       console.log(arrReal1)
+
+
+    </script>
+</body>
+</html>

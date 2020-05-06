@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let s=new Set([1,2]);
+    //s=new Set([1,2,3]);
+    console.log(s.size)
+
+    let s1=new Set([1,2,3,1,2]);
+    console.log(s1.size);
+    //转换为数组
+    let arr=[...s1];
+    console.log(arr)
+
+    let s2=new Set();
+    //添加值
+    s2.add(1).add(3).add(4);
+    console.log(s2.size)
+  
+    //删除值
+    let del=s2.delete(1);
+    console.log(s2.size)
+    console.log(del);
+   
+    //判断一个值是否为set数据结构中的成员
+    let has=s2.has(1);
+    console.log(s2.size)
+    console.log(has);
+   
+    //清空set数据结构中的值
+   s2.clear();
+   console.log(s2.size)
+
+    //遍历
+    let s3=new Set([2,5,6,8]);
+   s3.forEach(v => console.log(v))
+
+
+    
+
+    </script>
+</body>
+</html>
